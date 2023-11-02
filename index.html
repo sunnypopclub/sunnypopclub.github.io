@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunny Pop Club</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <script>
+    var app = function () {
+        var loading = document.getElementById("loading");
+        var loaded = document.getElementById("loaded");
+
+        setTimeout(function() {
+            loading.style.display = "none";
+            loaded.style.display = "block";
+        },1500);
+    } 
+    </script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+    <link href="css/normalize.min.css" rel="stylesheet">
+    
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            background-color: #1a1a1a;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+            -webkit-align-items: center;
+            align-items: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            color: #e0e0e0;
+        }
+
+        #loading {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: #1a1a1a;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        #loading .logo, #loading img {
+            border: 0;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        .logo {
+            padding: 5px;
+            display: inline-block;
+            border-radius: 50%;
+        }
+
+        .logo img {
+            position: relative;
+            display: inline-block;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-image: url('img/avatar-1024.png');
+            background-size: cover;
+            margin: 0 auto 20px auto;
+        }
+
+        .username {
+            color: #e0e0e0;
+            margin-bottom: 30px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .bio {
+            font-weight: bold;
+        }
+
+        .link-container {
+            padding: 0 20px 20px 20px;
+            border-radius: 10px;
+        }
+
+        a {
+            display: block;
+            background-color: #2c2c2c;
+            color: #fff;
+            text-align: center;
+            padding: 15px 25px;
+            margin: 10px 0;
+            border-radius: 10px;
+            text-decoration: none;
+            min-width: 400px; 
+            max-width: 90%;  
+            width: auto;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        a:hover {
+            background-color: #555;
+        }
+
+        .container {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div id="loading">
+        <div class="container">
+            <p class="logo">
+              <img src="img/avatar-1024.png">
+            </p>
+            <p class="center">LOADING</p>
+        </div>
+    </div>
+
+    <div id="loaded" style="display:none;">
+
+        <div class="container">
+            <div class="profile-pic"></div>
+            <div class="username">@sunnypopclub</div>
+            <div class="bio">Fire walks with me</div>
+            <div class="link-container">
+                <a href="https://hypeddit.com/sunnypopclub/bentobento">Pre-save “Bento Bento”</a>
+                <a href="https://maisonpralinee.com/">Maison Pralinee (Label)</a>
+                <a href="https://open.spotify.com/artist/0Z6yujMAhLvelwJqEtpL5Q">Spotify</a>
+                <a href="https://www.instagram.com/sunnypopclub/">Instagram</a>
+                <a href="https://www.tiktok.com/@sunnypopclub">TikTok</a>
+                <a href="https://shop.sunnypopclub.com/">Shop (T-Shirts & Goodies)</a>
+                <a href="https://sunnypopclub.gumroad.com/">Gumroad (use my tunes)</a>
+                <a href="https://www.youtube.com/channel/UCSqs6YzyoWQDwVdqNeZf_rw">YouTube</a>
+                <a href="https://tinyletter.com/sunnypopclub">Newsletter (Stay informed)</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        function init() {
+            if (typeof app === "undefined") {
+                setTimeout(function() {
+                    init();
+                }, 50);
+                return false;
+            }
+            app();
+        }
+        init();
+    })();
+
+    </script>
+</body>
+</html>
